@@ -1,0 +1,24 @@
+FROM python
+WORKDIR /app
+COPY . /app
+CMD [ "python","bmi.py" ]
+$ docker build -t pyth .
+$ docker run -it pyth
+(1) Metric (m, kg) or (2) Non-Metric (ft, pounds)?
+Please choose: 2
+Please enter your height in feet
+Your height: 145
+Please enter your weight in pounds
+Your weight: 355
+Your body-mass-index: 0.08243823938787027
+$ docker container prune
+$ docker image prune
+$ docker build -t pythonapp .
+$ docker run -it --rm --name C-pyth pythonapp
+(1) Metric (m, kg) or (2) Non-Metric (ft, pounds)?
+Please choose: 2
+Please enter your height in feet
+Your height: 41
+Please enter your weight in pounds
+Your weight: 35
+Your body-mass-index: 0.10165685986635895
